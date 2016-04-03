@@ -7,6 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <ul class="topnav">
+    <li><%= link_to "Introduction", root_path%></li>
+    <li><%= link_to "Before You Go", new_post_path%></li>
+    <li><%= link_to "Destinations", root_path%></a></li>
+    <li><%= link_to "Miscellaneous", root_path%></li>
+    <li class="icon">
+      <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+    </li>
+  </ul>
+
 
 <%= yield %>
 
