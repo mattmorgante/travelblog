@@ -10,10 +10,10 @@
   <p class="body">
     <%= @post.body %>
   </p>
- 
-  <button class="button"><%= link_to "Edit", edit_post_path(@post) %></button>
-  <button class="button"><%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?"} %></button>
-
+  <% if user_signed_in? %>
+    <button class="button"><%= link_to "Edit", edit_post_path(@post) %></button>
+    <button class="button"><%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?"} %></button>
+  <% end %>
 
   <div id="comments">
     <h2><%= @post.comments.count %> Comments</h2>
